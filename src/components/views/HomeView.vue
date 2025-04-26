@@ -1,4 +1,4 @@
-<script>
+<script setup>
 import Presentation from '../home/Presentation.vue';
 </script>
 
