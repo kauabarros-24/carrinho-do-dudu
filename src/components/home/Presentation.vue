@@ -19,7 +19,7 @@
 
       <div class="promo-image">
         <div class="image-wrapper">
-          <img src="./images/fire.png"></img>
+          <img src="./images/fire.png"> </img>
         </div>
         <p class="note">*edição limitada</p>
       </div>

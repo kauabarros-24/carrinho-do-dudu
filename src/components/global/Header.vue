@@ -1,7 +1,7 @@
 <template>
     <header class="navbar">
       <div class="logo-section">
-        <span class="logo">iFbooks</span>
+        <span class="logo">MacumbaBooks</span>
         <a href="#" class="link">Acerca e termos</a>
       </div>
   
