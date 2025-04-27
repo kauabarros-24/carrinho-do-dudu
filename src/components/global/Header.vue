@@ -1,7 +1,7 @@
 <template>
     <header class="navbar">
       <div class="logo-section">
-        <span class="logo">MacumbaBooks</span>
+        <span class="logo"><router-link  class="logoSpan" to="/">MacumbaBooks</router-link></span>
         <a href="#" class="link">Acerca e termos</a>
       </div>
   
@@ -15,27 +15,23 @@
         <a href="#">Equipe</a>
         <a href="#">Envio</a>
         <a href="#">Devoluções</a>
-        <a href="#">🛒</a>
+        <a href="#"><router-link to="/cart">🛒</router-link></a>
         <a href="#">💚</a>
         <a href="#">👤</a>
       </nav>
     </header>
   
-    <!-- Para dar espaçamento depois do header fixo -->
     <div class="header-space"></div>
   </template>
   
-  <script setup>
-  // Sem necessidade de script ainda
-  </script>
-  
+
   <style scoped>
   .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 70px; /* define altura fixa */
+    height: 70px; 
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -46,9 +42,8 @@
     box-sizing: border-box;
   }
   
-  /* Espaço para "empurrar" o conteúdo da página pra baixo */
   .header-space {
-    height: 70px; /* mesma altura do navbar */
+    height: 70px; 
   }
   
   .logo-section {
@@ -56,11 +51,18 @@
     align-items: center;
     gap: 10px;
   }
+.logoSpan {
+  font-weight: bold;
+    font-size: 20px;
+    color: #333;
+    text-decoration: none;
+}
   
   .logo {
     font-weight: bold;
     font-size: 20px;
     color: #333;
+    text-decoration: none;
   }
   
   .link {
