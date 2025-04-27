@@ -1,11 +1,9 @@
 <script setup>
 import { ref } from 'vue';
 
-// Estado dos produtos no carrinho
 const cart1 = ref(1);
 const cart2 = ref(1);
 
-// Funções para atualizar as quantidades
 function addToCart1() {
   cart1.value++;
 }
