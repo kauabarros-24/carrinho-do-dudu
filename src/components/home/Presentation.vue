@@ -178,7 +178,7 @@ h1 {
   padding: 30px;
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 5px 15px rgba(2, 2, 2, 0.25);
 }
 
 .feature-item {

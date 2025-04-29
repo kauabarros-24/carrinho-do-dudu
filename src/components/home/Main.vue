@@ -99,7 +99,7 @@
     padding: 1.5rem;
     position: relative;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px rgba(1, 1, 1, 0.25);
     border: 1px solid #e9ecef;
   }
   
