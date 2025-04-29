@@ -8,3 +8,9 @@ import Header from './components/global/Header.vue';
     <router-view /> 
   </div>
 </template> 
+
+<style>
+* {
+  font-family: 'Poppins', sans-serif;
+}
+</style>
