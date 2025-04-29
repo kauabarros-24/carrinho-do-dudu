@@ -135,7 +135,6 @@
     text-align: right;
   }
   
-  /* Estilo de promoção */
   .highlighted {
     border: 2px solid #ffd700;
   }
