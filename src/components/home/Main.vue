@@ -44,7 +44,7 @@ const books = ref([
     title: 'Chair of Front Volume 2',
     author: 'Cassandra Clare',
     price: 'R$23,24',
-    image: './images/theChair.png'
+    image: 'src/components/home/images/theChair.png',
   },
   {
     id: 2,
@@ -52,7 +52,7 @@ const books = ref([
     author: 'Cassandra Clare',
     price: 'R$13,94',
     oldPrice: 'R$26,92',
-    image: './images/fallenAngels.png',
+    image: 'src/components/home/images/fallenAngels.png',
     highlighted: true
   },
   {
@@ -60,31 +60,30 @@ const books = ref([
     title: 'Nona the Ninth',
     author: 'Cassandra Clare',
     price: 'R$16,84',
-    image: './images/nonaNinth.png'
+    image: 'src/components/home/images/nonaNinth.png'
   },
   {
     id: 4,
     title: 'Carrie Soto is Back',
     author: 'Taylor Jenkins',
     price: 'R$26,04',
-    image: './images/sotoBack.png'
+    image: 'src/components/home/images/sotoBack.png'
   },
   {
     id: 5,
     title: 'Book Lovers',
     author: 'Emily Henry',
     price: 'R$15,81',
-    image: './images/bookLovers.png'
+    image: 'src/components/home/images/bookLovers.png'
   },
   {
     id: 6,
     title: 'Two Old Women',
     author: 'Velma Wallis',
     price: 'R$13,95',
-    image: './images/oldWomem.png'
+    image: 'src/components/home/images/oldWomem.png'
   }
 ])
-
 const animateAddToCart = (book) => {
   const cart = JSON.parse(localStorage.getItem('ifbooks_cart')) || []
   const existingItem = cart.find(item => item.id === book.id)
@@ -166,11 +165,14 @@ const animateAddToCart = (book) => {
   overflow: hidden;
   border-radius: 8px;
   margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .book-cover {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
