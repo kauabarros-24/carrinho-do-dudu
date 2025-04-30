@@ -298,8 +298,8 @@
   align-items: center;
   gap: 1px;;
   margin-top: auto;
-  justify-content: space-between; /* Novo */ 
-  width: 100%; /* Novo */
+  justify-content: space-between; 
+  width: 100%; 
 }
 
   .checkout-modal {
