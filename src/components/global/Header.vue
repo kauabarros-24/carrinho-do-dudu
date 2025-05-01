@@ -4,7 +4,7 @@
         <span class="logo"><router-link  class="logoSpan" to="/">MacumbaBooks</router-link></span>
         <a href="#" class="link">Acerca e termos</a>
       </div>
-  
+      
       <div class="search-section">
         <input type="text" placeholder="Pesquisar" class="search-input" />
         <button class="search-button">🔍</button>
@@ -17,7 +17,7 @@
         <a href="#">Devoluções</a>
         <a href="#"><router-link to="/cart">🛒</router-link></a>
         <a href="#">💚</a>
-        <a href="#">👤</a>
+        <a href="#"><router-link to="/signup">👤</router-link></a>
       </nav>
     </header>
   
