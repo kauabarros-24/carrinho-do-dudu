@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="auth-container">
     <div class="auth-card">
       <h2 class="auth-title">📜 Criar Novo Grimório</h2>
@@ -157,4 +157,7 @@ const handleSubmit = async () => {
 .auth-footer a:hover {
   text-decoration: underline;
 }
-</style>
+</style> -->
+<template>
+  
+</template>
