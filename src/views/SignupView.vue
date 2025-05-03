@@ -61,11 +61,13 @@ const handleSubmit = async () => {
   error.value = null
 
   try {
-    await api.post('/register', form, {
+    const response = await api.post('/register', form, {
       headers: { 'Content-Type': 'application/json' }
     })
-    alert("Você se registrou com sucesso!")
-    router.push("/")
+    if (response.status === 200 || response.status === 201) {
+      alert("Você se registrou com sucesso!")
+      router.push("/")
+    }
   } catch (err) {
     if (err.response) {
       error.value = err.response.data.detail || err.response.statusText
@@ -125,14 +127,15 @@ const handleSubmit = async () => {
 .auth-input:focus {
   border-color: #2d7a4b;
   box-shadow: 0 0 0 3px rgba(45,122,75,0.1);
+  outline: none;
 }
 
 .auth-btn {
   background: linear-gradient(135deg, #2d7a4b, #184d31);
-  color: #fff;
+  color: white;
   border: none;
   padding: 12px 20px;
-  border-radius: 4px;
+  border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
   transition: transform 0.3s ease;
