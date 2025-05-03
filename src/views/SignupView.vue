@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
   <div class="auth-container">
     <div class="auth-card">
       <h2 class="auth-title">📜 Criar Novo Grimório</h2>
@@ -26,13 +26,13 @@
           >
         </div>
 
-        <button type="submit" class="auth-btn" :disabled="authStore.loading">
-          <span v-if="!authStore.loading">🔓 Ativar Proteções</span>
+        <button type="submit" class="auth-btn" :disabled="loading">
+          <span v-if="!loading">🔓 Ativar Proteções</span>
           <span v-else>⚡ Conjurando...</span>
         </button>
 
-        <div v-if="authStore.error" class="error-message">
-          ⚠️ {{ authStore.error }}
+        <div v-if="error" class="error-message">
+          ⚠️ {{ error }}
         </div>
       </form>
 
@@ -44,23 +44,36 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { reactive, ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { axios } from '@/plugins/axios'
+import api from '../plugins/axios'
 
-const authStore = axios()
 const router = useRouter()
-
-const form = ref({
+const form = reactive({
   username: '',
   password: ''
 })
+const loading = ref(false)
+const error = ref(null)
 
 const handleSubmit = async () => {
-  const { success } = await authStore.register(form.value)
-  
-  if(success) {
-    router.push('/login')
+  loading.value = true
+  error.value = null
+
+  try {
+    await api.post('/register', form, {
+      headers: { 'Content-Type': 'application/json' }
+    })
+    alert("Você se registrou com sucesso!")
+    router.push("/")
+  } catch (err) {
+    if (err.response) {
+      error.value = err.response.data.detail || err.response.statusText
+    } else {
+      error.value = err.message
+    }
+  } finally {
+    loading.value = false
   }
 }
 </script>
@@ -157,7 +170,4 @@ const handleSubmit = async () => {
 .auth-footer a:hover {
   text-decoration: underline;
 }
-</style> -->
-<template>
-  
-</template>
+</style>
